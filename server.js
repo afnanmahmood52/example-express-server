@@ -27,7 +27,8 @@ app.get('/api/data', (req, res) => {
 // GET request endpoint
 app.get('/api/blablalalal', (req, res) => {
     res.status(200).json({ message: 'GET request received! blablalalal'})
-
+}
+)
 
 // Start the server
 app.listen(port, () => {
