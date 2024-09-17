@@ -9,7 +9,7 @@ const port = process.env.PORT;
 app.use(express.json());
 
 // POST request endpoint
-app.post('/api/add/data', (req, res) => {
+app.post('/post-request', (req, res) => {
     try {
         const { body } = req;
         res.status(200).json({ message: 'POST request received!', data: body });
