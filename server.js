@@ -8,16 +8,17 @@ const port = process.env.PORT;
 // Middleware to parse JSON bodies
 app.use(express.json());
 
-// GET request endpoint
-app.get('/api/data', (req, res) => {
-    res.json({ message: 'GET request received!', secret: process.env.JWT_SECRET });
-});
-
 // POST request endpoint
 app.post('/api/add/data', (req, res) => {
     const { body } = req;
     res.json({ message: 'POST request received!', data: body });
 });
+
+// GET request endpoint
+app.get('/api/data', (req, res) => {
+    res.json({ message: 'GET request received!', secret: process.env.JWT_SECRET });
+});
+
 
 // Start the server
 app.listen(port, () => {
