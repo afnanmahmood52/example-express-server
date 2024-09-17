@@ -30,6 +30,13 @@ app.get('/api/blablalalal', (req, res) => {
 }
 )
 
+
+// GET request endpoint
+app.put('/api/put-request', (req, res) => {
+    res.status(200).json({ message: 'GET request received! blablalalal'})
+}
+)
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server is running on ${port}`);
