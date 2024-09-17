@@ -14,7 +14,7 @@ app.get('/api/data', (req, res) => {
 });
 
 // POST request endpoint
-app.post('/api/data', (req, res) => {
+app.post('/api/add/data', (req, res) => {
     const { body } = req;
     res.json({ message: 'POST request received!', data: body });
 });
