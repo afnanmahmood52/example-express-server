@@ -10,14 +10,23 @@ app.use(express.json());
 
 // POST request endpoint
 app.post('/api/add/data', (req, res) => {
-    const { body } = req;
-    res.json({ message: 'POST request received!', data: body });
+    try {
+        const { body } = req;
+        res.status(200).json({ message: 'POST request received!', data: body });
+    } catch (error) {
+        res.status(500).json({ error: error});
+    }
 });
 
 // GET request endpoint
 app.get('/api/data', (req, res) => {
-    res.json({ message: 'GET request received!', secret: process.env.JWT_SECRET });
+    res.status(200).json({ message: 'GET request received!', secret: process.env.JWT_SECRET });
 });
+
+
+// GET request endpoint
+app.get('/api/blablalalal', (req, res) => {
+    res.status(200).json({ message: 'GET request received! blablalalal'})
 
 
 // Start the server
